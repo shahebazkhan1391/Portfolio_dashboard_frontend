@@ -17,7 +17,7 @@ function ContactForm() {
     // If our app is running live on the internet, use your Render backend link.
     // Otherwise, default back to localhost so you can still test on your machine!
     const backendUrl = import.meta.env.PROD 
-      ? "https://your-backend-name.onrender.com/api/contact" // <-- Replace with your real Render URL later
+      ? "https://portfolio-dashboard-backend-93pj.onrender.com" // <-- Replace with your real Render URL later
       : "http://localhost:5000/api/contact";
 
     try {
