@@ -1,0 +1,282 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background-color: #1a1a24;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+}
+
+.dashboard {
+  background: var(--bg-card);
+  padding: 2rem 1.5rem; /* Slightly reduced horizontal padding for small screens */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box; /* Crucial: ensures padding doesn't push width past 100% */
+  width: 100%; /* Allows the card to take up full width on small phones */
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  background: #3a3a50;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.title {
+  color: #646cff;
+  font-weight: bold;
+}
+
+.stats-section {
+  background: #1a1a24;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+button {
+  background-color: #646cff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+button:hover {
+  background-color: #535bf2;
+}
+
+.links-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link-btn {
+  display: block;
+  background: #3a3a50;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.link-btn:hover {
+  transform: translateY(-2px);
+  background: #4a4a68;
+}
+
+
+:root {
+  --bg-app: #1a1a24;
+  --bg-card: #242432;
+  --text-main: #ffffff;
+  --text-muted: #a0a0b0;
+  --accent: #646cff;
+  --tag-bg: #3a3a50;
+}
+
+/* Light Theme Variables overrides */
+.light-theme {
+  --bg-app: #f4f4f9;
+  --bg-card: #ffffff;
+  --text-main: #1a1a24;
+  --text-muted: #555566;
+  --accent: #4f46e5;
+  --tag-bg: #e2e8f0;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#root {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.dashboard {
+  background: var(--bg-card);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.theme-btn {
+  background: none;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  float: right;
+}
+
+.theme-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  background: var(--tag-bg);
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.title {
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.bio {
+  color: var(--text-muted);
+}
+
+/* Projects Section Styling */
+.projects-section {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.project-card {
+  background: var(--bg-app);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--tag-bg);
+}
+
+.project-card h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0 0 1rem 0;
+}
+
+.tech-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background: var(--tag-bg);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.project-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+
+/* Contact Form Styling */
+.contact-form {
+  text-align: left;
+  background: var(--bg-app);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--tag-bg);
+}
+
+.contact-form h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--text-main);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--tag-bg);
+  border-radius: 8px;
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 0.95rem;
+  box-sizing: border-box; 
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+.form-success {
+  background: rgba(100, 108, 255, 0.1);
+  border: 1px solid var(--accent);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+}
