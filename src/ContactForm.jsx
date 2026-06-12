@@ -6,37 +6,37 @@ function ContactForm() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  
-// 2. This runs when the user clicks "Send Message"
-const handleSubmit = async (e) => {
-  e.preventDefault() // Prevents the page from refreshing
 
-  const formData = { name, email, message }
+  // 2. This runs when the user clicks "Send Message"
+  const handleSubmit = async (e) => {
+    e.preventDefault() // Prevents the page from refreshing
+    console.log("🚀 Form submit handler triggered successfully!");
 
-  // Hardcoding the exact, absolute live URL with the path included
-  const backendUrl = "https://portfolio-dashboard-backend-93pj.onrender.com/api/contact";
+    const formData = { name, email, message }
+    const backendUrl = "https://portfolio-dashboard-backend-93pj.onrender.com/api/contact";
 
-  try {
-    const response = await fetch(backendUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(formData)
-    })
+    try {
+      const response = await fetch(backendUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      })
 
-    const result = await response.json()
+      const result = await response.json()
+      console.log("📥 Server response received:", result);
 
-    if (result.success) {
-      setSubmitted(true) // Shows the success screen
-    } else {
-      alert("Server error: " + (result.error || "Something went wrong"))
+      if (result.success) {
+        setSubmitted(true) // Shows the success screen
+      } else {
+        alert("Server error: " + (result.error || "Something went wrong"))
+      }
+    } catch (error) {
+      console.error("❌ Connection failed:", error)
+      alert("Could not connect to your backend server. Is it running?")
     }
-  } catch (error) {
-    console.error("Connection failed:", error)
-    alert("Could not connect to your backend server. Is it running?")
   }
-}
 
   // 3. If the form was submitted successfully, show this thank you box
   if (submitted) {
