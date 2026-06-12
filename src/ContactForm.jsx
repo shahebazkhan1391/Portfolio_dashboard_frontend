@@ -6,14 +6,15 @@ function ContactForm() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
+// 2. This runs when the user clicks "Send Message"
+const handleSubmit = async (e) => {
+  e.preventDefault() 
+  console.log("🚀 Form submit handler triggered successfully!");
 
-  // 2. This runs when the user clicks "Send Message"
-  const handleSubmit = async (e) => {
-    e.preventDefault() // Prevents the page from refreshing
-    console.log("🚀 Form submit handler triggered successfully!");
-
-    const formData = { name, email, message }
-    const backendUrl = "https://portfolio-dashboard-backend-93pj.onrender.com/api/contact";
+  const formData = { name, email, message }
+  
+  // REPLACE THIS LINE WITH YOUR EXACT VERCEL BACKEND LINK
+  const backendUrl = "https://portfolio-backend-xxxx.vercel.app/api/contact";
 
     try {
       const response = await fetch(backendUrl, {
