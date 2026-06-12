@@ -65,8 +65,8 @@ function App() {
 
         <div className="links-section" style={{ marginTop: '2.5rem' }}>
           <h3>Connect with me</h3>
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="link-btn">GitHub</a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="link-btn">LinkedIn</a>
+          <a href="https://https://github.com/shahebazkhan1391.com" target="_blank" rel="noreferrer" className="link-btn">GitHub</a>
+          <a href="https://www.linkedin.com/in/shahebaz-khan-/" target="_blank" rel="noreferrer" className="link-btn">LinkedIn</a>
         </div>
 
       </div>
