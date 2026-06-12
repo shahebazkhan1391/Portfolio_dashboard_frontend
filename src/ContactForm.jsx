@@ -44,8 +44,8 @@ const handleSubmit = async (e) => {
   if (submitted) {
     return (
       <div className="form-success">
-        <h4>🎉 Message Sent!</h4>
-        <p>Thanks for reaching out, {name}. Your data is now saved on my backend server!</p>
+        <h4> Message Sent!</h4>
+        <p>Thanks for reaching out, {name}. I've received your message and will get back to you within 24 hours. Speak soon!</p>
         <button onClick={() => { setSubmitted(false); setName(''); setEmail(''); setMessage(''); }}>
           Send another message
         </button>
